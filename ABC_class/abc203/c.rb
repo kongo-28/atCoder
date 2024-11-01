@@ -11,3 +11,34 @@
 # i 人目の友達は村 Ai にいて、太郎君が村 Ai に着いたときに 
 # Bi 円を太郎君に渡します。
 # 太郎君が最終的にたどり着く村の番号を求めてください。
+
+##################### 入力の取得 #######################
+friends_number, money = gets.split.map(&:to_i)
+
+# puts "友達は#{friends_number}人"
+# puts "お金は#{money}円"
+
+friends = []
+
+friends_number.times do
+  a,b = gets.split.map(&:to_i)
+  friends << [a,b]
+end
+
+#######################################################
+position = 0
+
+while money >= 1
+  money -= 1
+  position += 1
+
+  friends.each do |friend|
+    if position == friend[0]
+      money += friend[1]
+    end
+  end
+end
+
+puts position
+
+
