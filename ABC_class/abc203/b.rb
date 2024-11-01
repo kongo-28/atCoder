@@ -16,3 +16,18 @@
 # 足しあわせたらいくつになるのか興味を持ちました。 
 # その値を求めてください。
 
+n, k = gets.split.map(&:to_i)
+
+# puts "n:#{n} k:#{k}"
+
+sum = 0
+n.times do |i|
+  k.times do |j|
+    # puts (i+1)*100+j +1
+    sum += (i+1)*100+j +1
+  end
+end
+
+puts sum
+
+
