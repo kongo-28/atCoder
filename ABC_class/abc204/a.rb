@@ -9,13 +9,8 @@
 
 x, y = gets.split.map(&:to_i)
 
-puts x*3
-
 if x == y 
   puts x
-end
-
-if x != y 
-  
-
+else
+  puts 3 - x - y
 end
