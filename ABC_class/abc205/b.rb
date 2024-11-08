@@ -4,6 +4,17 @@
 # (1,2,…,N) の並び替えによって得られるかどうか判定してください。
 
 n = gets.to_i
-array = gets
+array = gets.split.map(&:to_i)
 
-p array
+count = 0
+n.times do |i|
+  if array.include?(i+1)
+    count += 1
+  end
+end
+
+if count == n
+  puts "Yes"
+else
+  puts "No"
+end
